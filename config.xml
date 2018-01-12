@@ -2,7 +2,7 @@
     	<widget xmlns   = "http://www.w3.org/ns/widgets"
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id          = "es.juntadeandalucia.mapea4.base"
-		versionCode = "100" 
+		android-versionCode = "100" 
 		version     = "1.0.0" >
 
 	<name>appBaseMapea4</name>
@@ -47,7 +47,7 @@
     <!-- al estar todos definidos, el icono y el splash por defecto no se usan, pero son
     necesarios para que PGB genere el resto. pongo los de menor resolución para reducir tamaño -->
 	<icon src="resources/android/icon/drawable-ldpi-icon.png"/>
-    <splash src="resources/android/splash/drawable-port-ldpi-screen.png"/>
+    <splash src="resources/android/splash/drawable-port-ldpi.png"/>
     <platform name="ios">
         <preference name="target-device" value="handset" />
         <!-- no genero splash para iPad (target-device=handset) -->
