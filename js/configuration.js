@@ -1,7 +1,7 @@
 /**
  * Mapea API
- * Version 4.0.4
- * Date 24-04-2017
+ * Version 4.2.0
+ * Date 29-11-2017
  */
 (function (M) {
    /**
@@ -10,54 +10,54 @@
     * @private
     * @type {Number}
     */
-   M.config('MOBILE_WIDTH', 768);
+    M.config('MOBILE_WIDTH', 768);
 
-   /**
-    * The Mapea URL
-    * @const
-    * @type {string}
-    * @public
-    * @api stable
-    */
-   M.config('MAPEA_URL', '');
-
-   /**
-    * The path to the Mapea proxy to send
-    * jsonp requests
-    * @const
-    * @type {string}
-    * @public
-    * @api stable
-    */
-   M.config('PROXY_URL', '');
-
-   /**
-    * The path to the Mapea proxy to send
-    * jsonp requests
-    * @const
-    * @type {string}
-    * @public
-    * @api stable
-    */
-   M.config('PROXY_POST_URL', '');
-
-   /**
-    * The path to the Mapea templates
-    * @const
-    * @type {string}
-    * @public
-    * @api stable
-    */
-   M.config('TEMPLATES_PATH', 'files/templates/');
-
-   /**
-    * The path to the Mapea theme
-    * @const
-    * @type {string}
-    * @public
-    * @api stable
-    */
-   M.config('THEME_URL', 'assets/');
+    /**
+     * The Mapea URL
+     * @const
+     * @type {string}
+     * @public
+     * @api stable
+     */
+    M.config('MAPEA_URL', '');
+ 
+    /**
+     * The path to the Mapea proxy to send
+     * jsonp requests
+     * @const
+     * @type {string}
+     * @public
+     * @api stable
+     */
+    M.config('PROXY_URL', '');
+ 
+    /**
+     * The path to the Mapea proxy to send
+     * jsonp requests
+     * @const
+     * @type {string}
+     * @public
+     * @api stable
+     */
+    M.config('PROXY_POST_URL', '');
+ 
+    /**
+     * The path to the Mapea templates
+     * @const
+     * @type {string}
+     * @public
+     * @api stable
+     */
+    M.config('TEMPLATES_PATH', 'files/templates/');
+ 
+    /**
+     * The path to the Mapea theme
+     * @const
+     * @type {string}
+     * @public
+     * @api stable
+     */
+    M.config('THEME_URL', 'assets/');
 
    /**
     * The Geosearch URL
@@ -129,34 +129,34 @@
     * @public
     * @api stable
     */
-   M.config('predefinedWMC', {
-      /**
-       * Predefined WMC URLs
-       * @const
-       * @type {Array<string>}
-       * @public
-       * @api stable
-       */
-      'urls': 'files/wmc/context_cdau_callejero.xml,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml,files/wmc/contextOrtofoto.xml'.split(','),
-
-      /**
-       * WMC predefined names
-       * @const
-       * @type {Array<string>}
-       * @public
-       * @api stable
-       */
-      'predefinedNames': 'cdau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache,ortofoto'.split(','),
-
-      /**
-       * WMC context names
-       * @const
-       * @type {Array<string>}
-       * @public
-       * @api stable
-       */
-      'names': 'Callejero,Hibrido,Satelite,mapa callejero cache,mapa del callejero,mapa idea,mapa ortofoto09,Callejero,Ortofoto,HÃ­brido,mapa ortofoto'.split(',')
-   });
+    M.config('predefinedWMC', {
+        /**
+         * Predefined WMC URLs
+         * @const
+         * @type {Array<string>}
+         * @public
+         * @api stable
+         */
+        'urls': 'files/wmc/context_cdau_callejero.xml,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml,files/wmc/contextOrtofoto.xml'.split(','),
+  
+        /**
+         * WMC predefined names
+         * @const
+         * @type {Array<string>}
+         * @public
+         * @api stable
+         */
+        'predefinedNames': 'cdau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache,ortofoto'.split(','),
+  
+        /**
+         * WMC context names
+         * @const
+         * @type {Array<string>}
+         * @public
+         * @api stable
+         */
+        'names': 'Callejero,Hibrido,Satelite,mapa callejero cache,mapa del callejero,mapa idea,mapa ortofoto09,Callejero,Ortofoto,HÃ­brido,mapa ortofoto'.split(',')
+     });
 
    /**
     * TODO
@@ -393,5 +393,12 @@
      * @type {String}
      */
     M.config('MAPBOX_TOKEN_VALUE', 'pk.eyJ1Ijoic2lnY29ycG9yYXRpdm9qYSIsImEiOiJjaXczZ3hlc2YwMDBrMm9wYnRqd3gyMWQ0In0.wF12VawgDM31l5RcAGb6AA');
-})(window.M);
 
+    /**
+     * Number of pages for the plugin AttributeTable
+     *
+     * @private
+     * @type {String}
+     */
+    M.config('ATTRIBUTETABLE_PAGES', '5');
+})(window.M);
